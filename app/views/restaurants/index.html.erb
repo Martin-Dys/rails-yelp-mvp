@@ -1,0 +1,12 @@
+<h1> Welcome to FindYourResto</h1>
+
+<h3> Find a restaurant close to your home</h3>
+
+<ul>
+<p> <% @restaurants.each do |restaurant| %></p>
+  <li> <%= link_to restaurant.name,  restaurant_path(restaurant)  %>
+    <%= restaurant.address %>
+    <%= restaurant.category%>
+   </li>
+   <% end %>
+</ul>
